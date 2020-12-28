@@ -79,8 +79,7 @@ class MyRBP(BaseEstimator, RandomBinaryProjections):
         self.reset(X.shape[1])
 
     def transform(self, X):
-        digits = self.hash_vector(X)[0]
-        return [int(digit) for digit in digits]
+        return self.hash_vector(X)
 
     def fit_transform(self, X, y):
         self.fit(X, y)
@@ -109,9 +108,9 @@ class MyRBP(BaseEstimator, RandomBinaryProjections):
             projection = v.dot(scipy.sparse.csr_matrix.transpose(self.normals_csr))
         else:
             # Project vector onto all hyperplane normals
-            projection = numpy.dot(v, numpy.matrix.transpose(self.normals))
+            projection = np.dot(v, np.matrix.transpose(self.normals))
         # Return binary key
-        return [''.join(['1' if x > 0.0 else '0' for x in projection])]
+        return projection > 0
 
 # Cell
 from sklearn.feature_extraction.text import CountVectorizer
