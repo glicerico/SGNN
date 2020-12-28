@@ -7,12 +7,18 @@ __all__ = ['import_data', 'MyRBP', 'build_preprocessor', 'build_keras_model', 'm
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
 
 def import_data(filepath):
     data = pd.read_csv(data_filepath)
     data = data.dropna(axis=0)  # Drop rows with NA values
     y = data.DamslActTag
     X = data.Text
+
+    # Convert labels to categories
+    le = LabelEncoder()
+    y = le.fit_transform(y)
+
     return X, y
 
 # Cell
@@ -108,8 +114,8 @@ def build_preprocessor(T=80, d=14, char_ngram_range=(1, 4)):
 # Cell
 import tensorflow as tf
 
-def build_keras_model():
-    model = tf.keras.Sequential(train_labels)
+def build_keras_model(train_labels):
+    model = tf.keras.Sequential()
     model.add(tf.keras.layers.Dense(256, activation=tf.nn.sigmoid, input_shape=(1120,)))
     model.add(tf.keras.layers.Dropout(0.25))
     model.add(tf.keras.layers.Dense(256, activation=tf.nn.sigmoid))
