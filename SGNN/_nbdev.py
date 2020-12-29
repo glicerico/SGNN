@@ -3,8 +3,9 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"import_data": "00_core.ipynb",
+         "preprocess_data": "00_core.ipynb",
          "MyRBP": "00_core.ipynb",
-         "build_preprocessor": "00_core.ipynb",
+         "build_input_layer": "00_core.ipynb",
          "build_keras_model": "00_core.ipynb",
          "main": "00_core.ipynb",
          "EPOCHS": "00_core.ipynb",
