@@ -10,6 +10,7 @@ index = {"import_data": "00_core.ipynb",
          "main": "00_core.ipynb",
          "EPOCHS": "00_core.ipynb",
          "BATCH_SIZE": "00_core.ipynb",
+         "LOWERCASE": "00_core.ipynb",
          "data_filepath": "00_core.ipynb"}
 
 modules = ["core.py"]
