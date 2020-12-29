@@ -134,7 +134,7 @@ def build_keras_model(train_labels):
     lr_schedule = tf.keras.experimental.CosineDecay(0.025, decay_steps=1000000)
     # SGD optimizer with Nesterov momentum
     opt = tf.keras.optimizers.SGD(nesterov=True, learning_rate=lr_schedule)
-    # opt = tf.keras.optimizers.SGD(nesterov=True)
+    opt = tf.keras.optimizers.SGD(nesterov=True)
     model.compile(loss='categorical_crossentropy',
                   optimizer=opt,
                   metrics=['accuracy'])
@@ -155,9 +155,8 @@ def main():
     keras_model.evaluate(test_features, test_labels)
 
 # Cell
-EPOCHS = 200
+EPOCHS = 1000
 BATCH_SIZE = 100
 data_filepath = "/home/andres/repositories/SGNN/data/swda-acttags-and-text.csv"
-data_filepath = "/home/andres/repositories/SGNN/data/test_swda-acttags-and-text.csv"
 
 main()
