@@ -13,7 +13,9 @@ index = {"import_data": "00_core.ipynb",
          "LOWERCASE": "00_core.ipynb",
          "CLEAN": "00_core.ipynb",
          "REMOVE_CONTINUATIONS": "00_core.ipynb",
-         "data_filepath": "00_core.ipynb"}
+         "TRAIN_FILEPATH": "00_core.ipynb",
+         "VALID_FILEPATH": "00_core.ipynb",
+         "TEST_FILEPATH": "00_core.ipynb"}
 
 modules = ["core.py"]
 
