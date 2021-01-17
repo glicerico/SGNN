@@ -231,7 +231,7 @@ def main(lowercase=False, clean=False, remove_continuations=True):
 #     keras_model.evaluate(test_features, test_labels)
 
 
-c# Cell
+# Cell
 EPOCHS = 1000
 BATCH_SIZE = 100
 LOWERCASE=True
