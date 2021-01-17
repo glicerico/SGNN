@@ -18,4 +18,3 @@ With this implementation, I have only managed to achieve a maximum accuracy of 7
 - Open the `00_core.ipynb` notebook and modify `REPO_PATH = "<PATH-TO-SGNN-REPO>"` in the last cell. Modify any parameters you want to tweak from the network, then run the whole notebook.
 
 - Alternatively, you can use `core.py` from the terminal or a Python IDE.
-
