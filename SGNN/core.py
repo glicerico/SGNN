@@ -232,7 +232,8 @@ def main(lowercase=False, clean=False, remove_continuations=True):
 
 
 # Cell
-EPOCHS = 1000
+# EPOCHS = 1000
+EPOCHS = 1
 BATCH_SIZE = 100
 LOWERCASE=True
 CLEAN=True
